@@ -4,7 +4,7 @@ import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 nltk.download('vader_lexicon')
 # Load the Transformers sentiment analysis model
-transformers_pipeline = pipeline("sentiment-analysis")
+# transformers_pipeline = pipeline("sentiment-analysis")
 # Load the RoBERTa sentiment analysis model
 roberta_classifier = pipeline("sentiment-analysis", model="roberta-base")
 # Initialize VADER sentiment analyzer
@@ -41,6 +41,6 @@ if st.button("Analyze"):
         st.subheader("RoBERTa Sentiment Analysis:")
         st.write(f"Sentiment : {roberta_score['label']}")
         st.write(f"Score:{roberta_score['score']}")
-        st.subheader("Transformers Sentiment Analysis:")
-        st.write(f"Sentiment : {trans_score['label']}")
-        st.write(f"Score : {trans_score['score']}")
+        # st.subheader("Transformers Sentiment Analysis:")
+        # st.write(f"Sentiment : {trans_score['label']}")
+        # st.write(f"Score : {trans_score['score']}")
