@@ -17,12 +17,12 @@ text_input = st.text_area("Enter your text here:")
 if st.button("Analyze"):
     if text_input:
         # Analyze using Transformers
-        trans_result = transformers_pipeline(text_input)[0]
-        trans_label = trans_result['label']
-        trans_score = {
-            "label": trans_label,
-            "score": round(trans_result['score'], 3)
-        }
+        # trans_result = transformers_pipeline(text_input)[0]
+        # trans_label = trans_result['label']
+        # trans_score = {
+        #     "label": trans_label,
+        #     "score": round(trans_result['score'], 3)
+        # }
         # Analyze sentiment using VADER
         vader_scores = vader_analyzer.polarity_scores(text_input)
         
